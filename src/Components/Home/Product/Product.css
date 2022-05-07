@@ -1,0 +1,16 @@
+.image {
+    width: 20rem;
+}
+
+.card {
+    width: 20rem;
+}
+
+.button-color {
+    background-color: #0E54AE;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    border-radius: .4rem;
+    border: none;
+}

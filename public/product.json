@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Dental Services",
+        "quantity": "300",
+        "description": "Globally harness multimedia based collaboration and idea haring with backend products.",
+        "supplierName": "Hridoy",
+        "img": "https://i.ibb.co/RYZvKyH/img-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dental Implants",
+        "quantity": "100",
+        "description": "Dramatically disseminate standardized metrics after resource-leveling processes.",
+        "supplierName": "Hridoy",
+        "img": "https://i.ibb.co/5Kqz9Sg/img-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Surgery",
+        "quantity": "150",
+        "description": "Proactively fabricate one-to-one materials via effective e-business services processes.",
+        "supplierName": "Hridoy",
+        "img": "https://i.ibb.co/vzv2S86/img-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Teeth Whitening",
+        "quantity": "180",
+        "description": "Distinctively re-engineer revolutionary meta-services and premium architectures..",
+        "supplierName": "Hridoy",
+        "img": " https://i.ibb.co/ScPNVr5/img-4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Teeth Whitening",
+        "quantity": "180",
+        "description": "Distinctively re-engineer revolutionary meta-services and premium architectures..",
+        "supplierName": "Hridoy",
+        "img": " https://i.ibb.co/ts3PLg4/img-5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Teeth Whitening",
+        "quantity": "180",
+        "description": "Distinctively re-engineer revolutionary meta-services and premium architectures..",
+        "supplierName": "Hridoy",
+        "img": "  https://i.ibb.co/8jTyZ5v/img-6.jpg"
+    }
+]
