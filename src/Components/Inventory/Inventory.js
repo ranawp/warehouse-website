@@ -6,9 +6,9 @@ const Inventory = () => {
     return (
         <div>
             <h2>Inventory page:{inventoryId}</h2>
-            <Link to='/checkout'>
+            {/* <Link to='/checkout'>
                 <button className='btn btn-primary'> proceed checkout</button>
-            </Link>
+            </Link> */}
         </div>
     );
 };

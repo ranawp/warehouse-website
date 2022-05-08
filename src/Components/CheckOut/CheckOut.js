@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CheckOut = () => {
     return (
         <div>
-            <h4>Please checkout</h4>
+            {/* <h4>Please checkout</h4> */}
 
         </div>
     );

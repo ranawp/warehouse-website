@@ -1,10 +1,22 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { async } from '@firebase/util';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const emailRef = useRef('')
+    const passwordref = useRef('')
+    const navigate = useNavigate()
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || '/'
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -12,11 +24,20 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const emailRef = useRef('')
-    const passwordref = useRef('')
-    const navigate = useNavigate()
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
+
     if (user) {
-        navigate('/home');
+        navigate(from, { replace: true });
+    }
+    let errorElement;
+    if (error) {
+
+        errorElement =
+            <p className='text-danger text-center'>Error: {error?.message}</p>
+
+
     }
     const handleSubmit = event => {
         event.preventDefault();
@@ -27,6 +48,11 @@ const Login = () => {
     }
     const navigateRegister = event => {
         navigate('/register')
+    }
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        toast('Sent email');
     }
 
     return (
@@ -49,10 +75,14 @@ const Login = () => {
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group> */}
                 <Button variant="primary" type="submit">
-                    Submit
+                    Login
                 </Button>
             </Form>
+            {errorElement}
             <p className='text-center'>New to Organic? <Link to='/register' className='text-danger text-decoration-none' onClick={navigateRegister}>Please register</Link></p>
+            <p className='text-center'>Forget Password? <Link to='/register' className='text-danger text-decoration-none' onClick={resetPassword}>Reset Password</Link></p>
+            <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };
