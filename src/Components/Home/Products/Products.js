@@ -9,8 +9,8 @@ const Products = () => {
             .then(data => setProducts(data))
     })
     return (
-        <div className='container'>
-            <h1 className="text-center">Products</h1>
+        <div id='inventory' className='container'>
+            <h1 className="text-center">Inventory</h1>
             <div className='row'>
                 {
                     products.map(product => <Product
