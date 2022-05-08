@@ -1,20 +1,34 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
 const Login = () => {
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
     const emailRef = useRef('')
     const passwordref = useRef('')
     const navigate = useNavigate()
+    if (user) {
+        navigate('/home');
+    }
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const passowrd = passwordref.current.value;
 
-        console.log(email, passowrd)
+        signInWithEmailAndPassword(email, passowrd)
     }
     const navigateRegister = event => {
         navigate('/register')
     }
+
     return (
         <div className='container'>
             <h1 className='text-center'>Please Login </h1>
@@ -44,3 +58,24 @@ const Login = () => {
 };
 
 export default Login;
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAuth } from 'firebase/auth'
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//     apiKey: process.env.REACT_APP_apiKey,
+//     authDomain: process.env.REACT_APP_authDomain,
+//     projectId: process.env.REACT_APP_projectId,
+//     storageBucket: process.env.REACT_APP_storageBucket,
+//     messagingSenderId: process.env.REACT_APP_messagingSenderId,
+//     appId: process.env.REACT_APP_appId
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app)
+// export default auth
