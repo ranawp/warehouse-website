@@ -26,18 +26,18 @@ const SocialLogin = () => {
     return (
         <>
             <div className='d-flex align-items-center w-50 mx-auto'>
-                <div style={{ height: '1px' }} className='bg-primary w-50'></div>
+                <div style={{ height: '1px' }} className='bg-success w-50'></div>
                 <p className='mt-2 mx-2'>or</p>
-                <div style={{ height: '1px' }} className='bg-primary w-50'></div>
+                <div style={{ height: '1px' }} className='bg-success w-50'></div>
 
             </div>
             {errorElement}
 
             <div className='mx-auto w-50'>
-                <button onClick={() => signInWithGoogle()} href="" className='btn btn-primary mx-auto ' style={{}}>Google Sign in</button>
+                <button onClick={() => signInWithGoogle()} href="" className=' button-color mx-auto ' style={{}}>Google Sign in</button>
             </div>
             <div className='mx-auto w-50 mt-3'>
-                <button onClick={() => signInWithGithub()} href="" className='btn btn-primary mx-auto ' style={{}}>Github Sign in</button>
+                <button onClick={() => signInWithGithub()} href="" className='button-color mx-auto ' style={{}}>Github Sign in</button>
             </div>
         </>
     );

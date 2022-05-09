@@ -19,11 +19,11 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link style={{ color: 'green' }} className='nav navbar-text' href="home#inventory">Inventory</Nav.Link>
+                            {/* <Nav.Link style={{ color: 'green' }} className='nav navbar-text' href="home#inventory">Inventory</Nav.Link> */}
                             {
                                 user && <>
                                     <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to='/addInventory'>Add Inventory</Nav.Link>
-                                    <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to='/manageInventory'>Manage Inventory</Nav.Link>
+                                    <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to='/manageInventory'>Manage all Inventories</Nav.Link>
 
                                 </>
                             }

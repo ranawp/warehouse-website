@@ -61,30 +61,28 @@ const Login = () => {
 
     return (
         <div className='container'>
-            <h1 className='text-center'>Please Login </h1>
+            <h1 className='text-success text-center'>Please Login </h1>
             <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className='text-success'>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
+
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className='text-success'>Password</Form.Label>
                     <Form.Control ref={passwordref} type="password" placeholder="Password" required />
                 </Form.Group>
                 {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group> */}
-                <Button variant="primary" type="submit">
+                <Button className='button-color' variant="primary" type="submit">
                     Login
                 </Button>
             </Form>
             {errorElement}
-            <p className='text-center'>New to Organic? <Link to='/register' className='text-danger text-decoration-none' onClick={navigateRegister}>Please register</Link></p>
-            <p className='text-center'>Forget Password? <button style={{ border: 'none' }} className='text-danger text-decoration-none bg-white' onClick={resetPassword}>Reset Password</button></p>
+            <p className='text-center '>New to Organic? <Link to='/register' className='text-success text-decoration-none' onClick={navigateRegister}>Please register</Link></p>
+            <p className='text-center '>Forget Password? <button style={{ border: 'none' }} className='text-success text-decoration-none bg-white' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>

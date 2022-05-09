@@ -2,3 +2,7 @@
     width: 100%;
 
 }
+
+.banner-height {
+    min-height: 17rem;
+}

@@ -18,9 +18,10 @@ const Banner = () => {
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 banner-height"
                         src={banner1}
                         alt="First slide"
+
                     />
                     <Carousel.Caption>
                         <h3>We Provide 100% hygenic food</h3>
@@ -29,7 +30,7 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 banner-height"
                         src={banner2}
                         alt="Second slide"
                     />
@@ -41,7 +42,7 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 banner-height"
                         src={banner}
                         alt="Third slide"
                     />

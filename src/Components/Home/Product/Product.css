@@ -14,3 +14,8 @@
     border-radius: .4rem;
     border: none;
 }
+
+.button-color:hover {
+    background-color: green;
+    color: white;
+}
