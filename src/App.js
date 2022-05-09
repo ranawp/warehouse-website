@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
+import AddInventory from './Components/AddInventory/AddInventory';
+import Addservice from './Components/AddInventory/AddInventory';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Navbar';
@@ -9,6 +11,7 @@ import Home from './Components/Home/Home/Home';
 import Products from './Components/Home/Products/Products';
 import Inventory from './Components/Inventory/Inventory';
 import Login from './Components/Login/Login';
+import ManageInventory from './Components/ManageInventory/ManageInventory';
 import NotFound from './Components/NotFound/NotFound';
 import Register from './Components/Register/Register';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
@@ -35,6 +38,19 @@ function App() {
           </RequireAuth>
 
         }></Route>
+        <Route path='/addInventory' element={
+          <RequireAuth>
+            <AddInventory></AddInventory>
+          </RequireAuth>
+        }>
+        </Route>
+        <Route path='/manageInventory' element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        } >
+
+        </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

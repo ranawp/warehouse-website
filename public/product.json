@@ -4,6 +4,7 @@
         "quantity": "20",
         "description": "Apple is good for health.This product is hugenic",
         "supplierName": "Hridoy",
+        "Price": "120",
         "img": "https://i.ibb.co/RYZvKyH/img-1.jpg"
     },
     {
@@ -11,6 +12,7 @@
         "quantity": "15",
         "description": "This mango called as rajshai mango",
         "supplierName": "Hridoy",
+        "Price": "140",
         "img": "https://i.ibb.co/5Kqz9Sg/img-2.jpg"
     },
     {
@@ -18,6 +20,7 @@
         "quantity": "16",
         "description": "This fruit good for our health",
         "supplierName": "Hridoy",
+        "Price": "190",
         "img": "https://i.ibb.co/vzv2S86/img-3.jpg"
     },
     {
@@ -25,6 +28,7 @@
         "quantity": "25",
         "description": "This is rich of vitamin-c",
         "supplierName": "Hridoy",
+        "Price": "120",
         "img": " https://i.ibb.co/ScPNVr5/img-4.jpg"
     },
     {
@@ -32,6 +36,7 @@
         "quantity": "30",
         "description": "Papaya is collected from our garden",
         "supplierName": "Hridoy",
+        "Price": "100",
         "img": " https://i.ibb.co/ts3PLg4/img-5.jpg"
     },
     {
@@ -39,6 +44,7 @@
         "quantity": "30",
         "description": "This product are unique",
         "supplierName": "Hridoy",
+        "Price": "190",
         "img": "  https://i.ibb.co/8jTyZ5v/img-6.jpg"
     }
 ]
