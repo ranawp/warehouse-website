@@ -5,7 +5,7 @@ const Inventory = () => {
     const { inventoryId } = useParams()
     const [inventory, setInventory] = useState({})
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://secret-castle-07996.herokuapp.com/inventory/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setInventory(data));

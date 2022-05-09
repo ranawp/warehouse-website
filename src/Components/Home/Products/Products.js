@@ -4,16 +4,16 @@ import Product from '../Product/Product';
 const Products = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://secret-castle-07996.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => setProducts(data))
     })
     return (
         <div id='inventory' className='container'>
-            <h1 className="text-center">Inventory</h1>
+            <h1 className="text-center mt-5 mb-4" style={{ color: 'green' }}>Inventory</h1>
             <div className='row'>
                 {
-                    products.map(product => <Product
+                    products.slice(0, 6).map(product => <Product
                         key={product._id}
                         product={product}
 

@@ -12,16 +12,16 @@ const Product = ({ product }) => {
 
     return (
         <div className='g-2 col-sm-12 col-md-6 col-lg-4 '>
-            <div className="card">
+            <div style={{ width: '15rem' }} className="card p-3 ">
 
-                <img src={img} className="card-img-top img-fluid image" alt="..." />
-                <h5 className="card-title">{name}</h5>
+                <img src={img} className="card-img-top image" alt="..." style={{ width: '12rem' }} />
+                <h5 className="card-title" style={{ color: 'green' }}>{name}</h5>
                 <div className="card-body">
-                    <p>Description:{description}</p>
-                    <p>Quantity:{quantity}</p>
+                    <p> <span style={{ color: 'green' }}>Description:</span> {description}</p>
+                    <p><span style={{ color: 'green' }}> Quantity:</span>{quantity}</p>
 
-                    <p>Supplier-Name: {supplierName}</p>
-                    <p>Price:{Price}</p>
+                    <p><span style={{ color: 'green' }}>Supplier-Name: </span>{supplierName}</p>
+                    <p><span style={{ color: 'green' }}>Price: </span> {Price}</p>
                     <button onClick={() => inventoryDetail(_id)
 
                     } className="btn button-color">Update</button>

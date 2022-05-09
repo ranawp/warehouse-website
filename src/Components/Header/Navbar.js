@@ -4,7 +4,8 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom'
 import auth from '../../firebase.init';
-
+import logo from '../../photo/logo.png'
+import './Navbar.css'
 const Header = () => {
     const [user] = useAuthState(auth)
     const handleSignOut = () => {
@@ -12,17 +13,17 @@ const Header = () => {
     }
     return (
         <>
-            <Navbar sticky="top" collapseOnSelect expand="lg" bg="primary" variant="dark">
+            <Navbar sticky="top" collapseOnSelect expand="lg" bg="white" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">Organic</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/"> <img style={{ width: '3rem' }} src={logo} alt="logo" />  </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="home#inventory">Inventory</Nav.Link>
+                            <Nav.Link style={{ color: 'green' }} className='nav navbar-text' href="home#inventory">Inventory</Nav.Link>
                             {
                                 user && <>
-                                    <Nav.Link as={Link} to='/addInventory'>Add Inventory</Nav.Link>
-                                    <Nav.Link as={Link} to='/manageInventory'>Manage Inventory</Nav.Link>
+                                    <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to='/addInventory'>Add Inventory</Nav.Link>
+                                    <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to='/manageInventory'>Manage Inventory</Nav.Link>
 
                                 </>
                             }
@@ -30,12 +31,12 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="about">About</Nav.Link>
+                            <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to="about">About</Nav.Link>
                             {
                                 user ?
-                                    <button className='btn btn-link text-decoration-none text-white' onClick={handleSignOut}>SignOut</button>
+                                    <button className='log-button' onClick={handleSignOut}>SignOut</button>
                                     :
-                                    <Nav.Link as={Link} to="login">
+                                    <Nav.Link className='log-button' as={Link} to="login">
                                         Login
                                     </Nav.Link>}
                         </Nav>

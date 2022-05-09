@@ -1,0 +1,28 @@
+.navbar-text {
+    color: green;
+
+}
+
+.nav:hover {
+    color: rgb(80, 133, 80);
+
+    text-decoration: underline;
+}
+
+
+span.navbar-toggler-icon {
+    background-color: green;
+    border: 5px solid green;
+}
+
+.log-button {
+    background-color: green;
+    color: white;
+    border-radius: .3rem;
+    border: none;
+    margin-left: 1rem;
+}
+
+.log-button:hover {
+    color: white;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import banner from '../../../photo/img-10.jpg'
+import banner1 from '../../../photo/banner1.jpg'
+import banner2 from '../../../photo/banner2.jpg'
 import './Banner.css'
 
 const Banner = () => {
@@ -17,24 +19,24 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner}
+                        src={banner1}
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>We Provide 100% hygenic food</h3>
+                        <p>Customer satisfection is our main target.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner}
+                        src={banner2}
                         alt="Second slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Furits makes you more healthy.</h3>
+                        <p>Everbody needs proper nutration.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,9 +47,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        <h3>We deliverd with safety.</h3>
+                        <p> Fruits heal your body naturally.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>

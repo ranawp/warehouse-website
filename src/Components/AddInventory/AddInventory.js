@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const AddInventory = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        const url = `http://localhost:5000/inventory/`
+        const url = `https://secret-castle-07996.herokuapp.com/inventory/`
         fetch(url, {
             method: 'POST',
             headers: {
