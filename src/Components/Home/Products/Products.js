@@ -4,7 +4,7 @@ import Product from '../Product/Product';
 const Products = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('product.json')
+        fetch('http://localhost:5000/inventory')
             .then(res => res.json())
             .then(data => setProducts(data))
     })
@@ -14,7 +14,7 @@ const Products = () => {
             <div className='row'>
                 {
                     products.map(product => <Product
-                        key={product.id}
+                        key={product._id}
                         product={product}
 
                     ></Product>)

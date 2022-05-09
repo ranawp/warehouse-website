@@ -1,49 +1,43 @@
 [
     {
-        "id": 1,
-        "name": "Dental Services",
-        "quantity": "300",
-        "description": "Globally harness multimedia based collaboration and idea haring with backend products.",
+        "name": "Apple",
+        "quantity": "20",
+        "description": "Apple is good for health.This product is hugenic",
         "supplierName": "Hridoy",
         "img": "https://i.ibb.co/RYZvKyH/img-1.jpg"
     },
     {
-        "id": 2,
-        "name": "Dental Implants",
-        "quantity": "100",
-        "description": "Dramatically disseminate standardized metrics after resource-leveling processes.",
+        "name": "Mango",
+        "quantity": "15",
+        "description": "This mango called as rajshai mango",
         "supplierName": "Hridoy",
         "img": "https://i.ibb.co/5Kqz9Sg/img-2.jpg"
     },
     {
-        "id": 3,
-        "name": "Surgery",
-        "quantity": "150",
-        "description": "Proactively fabricate one-to-one materials via effective e-business services processes.",
+        "name": "Pinaple",
+        "quantity": "16",
+        "description": "This fruit good for our health",
         "supplierName": "Hridoy",
         "img": "https://i.ibb.co/vzv2S86/img-3.jpg"
     },
     {
-        "id": 4,
-        "name": "Teeth Whitening",
-        "quantity": "180",
-        "description": "Distinctively re-engineer revolutionary meta-services and premium architectures..",
+        "name": "Orange",
+        "quantity": "25",
+        "description": "This is rich of vitamin-c",
         "supplierName": "Hridoy",
         "img": " https://i.ibb.co/ScPNVr5/img-4.jpg"
     },
     {
-        "id": 5,
-        "name": "Teeth Whitening",
-        "quantity": "180",
-        "description": "Distinctively re-engineer revolutionary meta-services and premium architectures..",
+        "name": "Papaya",
+        "quantity": "30",
+        "description": "Papaya is collected from our garden",
         "supplierName": "Hridoy",
         "img": " https://i.ibb.co/ts3PLg4/img-5.jpg"
     },
     {
-        "id": 6,
-        "name": "Teeth Whitening",
-        "quantity": "180",
-        "description": "Distinctively re-engineer revolutionary meta-services and premium architectures..",
+        "name": "Yellow-apple",
+        "quantity": "30",
+        "description": "This product are unique",
         "supplierName": "Hridoy",
         "img": "  https://i.ibb.co/8jTyZ5v/img-6.jpg"
     }

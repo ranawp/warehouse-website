@@ -51,8 +51,12 @@ const Login = () => {
     }
     const resetPassword = async () => {
         const email = emailRef.current.value;
-        await sendPasswordResetEmail(email);
-        toast('Sent email');
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        } else {
+            toast('Please input your email')
+        }
     }
 
     return (
@@ -80,7 +84,7 @@ const Login = () => {
             </Form>
             {errorElement}
             <p className='text-center'>New to Organic? <Link to='/register' className='text-danger text-decoration-none' onClick={navigateRegister}>Please register</Link></p>
-            <p className='text-center'>Forget Password? <Link to='/register' className='text-danger text-decoration-none' onClick={resetPassword}>Reset Password</Link></p>
+            <p className='text-center'>Forget Password? <button style={{ border: 'none' }} className='text-danger text-decoration-none bg-white' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>
