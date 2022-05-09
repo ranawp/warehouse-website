@@ -3,6 +3,7 @@ import './App.css';
 import About from './Components/About/About';
 import AddInventory from './Components/AddInventory/AddInventory';
 import Addservice from './Components/AddInventory/AddInventory';
+import Blog from './Components/Blog/Blog';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Navbar';
@@ -29,7 +30,7 @@ function App() {
               <Inventory></Inventory>
             </RequireAuth>
           }></Route>
-        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/contact' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/checkout' element={
@@ -51,6 +52,12 @@ function App() {
         } >
 
         </Route>
+        <Route path='/blog' element={
+          <RequireAuth>
+            <Blog></Blog>
+          </RequireAuth>
+
+        }> </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

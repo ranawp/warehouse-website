@@ -19,7 +19,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            {/* <Nav.Link style={{ color: 'green' }} className='nav navbar-text' href="home#inventory">Inventory</Nav.Link> */}
+                            <Nav.Link style={{ color: 'green' }} as={Link} to="/blog" >Blog</Nav.Link>
                             {
                                 user && <>
                                     <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to='/addInventory'>Add Inventory</Nav.Link>
@@ -30,8 +30,10 @@ const Header = () => {
 
 
                         </Nav>
+                        <Navbar.Brand >  </Navbar.Brand>
+
                         <Nav>
-                            <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to="about">About</Nav.Link>
+                            <Nav.Link style={{ color: 'green' }} className='nav navbar-text' as={Link} to="/contact">Contact us</Nav.Link>
                             {
                                 user ?
                                     <button className='log-button' onClick={handleSignOut}>SignOut</button>
