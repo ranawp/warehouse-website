@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 * Live website link: https://warehouse-197e7.web.app/ 
-* project name: Organic. 
+* project name: Organic Fruits. 
 
 ## Short description about my Project: 
 * we use react js and use mongodb for database. 

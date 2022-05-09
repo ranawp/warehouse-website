@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className='mt-5'>
             <div className='text-white' style={{ backgroundColor: 'green' }}>
                 <div className='container'>
-                    <h3 className=' text-center py-3'>Organic</h3>
+                    <h3 className=' text-center py-3'>Organic Fruits</h3>
                     <div className='row'>
                         <div className="col-md-6 col-12">
                             <p>Mirpur-10,Dhaka</p>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            {/* <p className='text-center'><small>copyright @ {year}</small></p> */}
+            <p className='text-center'><small>copyright @ {year}</small></p>
         </footer>
     );
 };
